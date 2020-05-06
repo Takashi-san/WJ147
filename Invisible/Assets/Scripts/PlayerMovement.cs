@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	public void Move(PlayerData.Direction direction, float time) {
+		LockMovement();
 		switch (direction) {
 			case PlayerData.Direction.Up:
 				_movement = Vector2.up;
@@ -90,7 +91,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	IEnumerator MoveTimer(float time) {
-		LockMovement();
 		yield return new WaitForSeconds(time);
 		UnlockMovement();
 		yield break;
@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void LockMovement() {
 		_controls.Player.Disable();
+		_movement = Vector2.zero;
 		_forcedMovement = true;
 	}
 
