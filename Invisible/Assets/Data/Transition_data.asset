@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
   camDefault: {x: 0, y: 0, z: -10}
-  camUp: {x: 0, y: 20, z: -10}
-  camDown: {x: 0, y: -20, z: -10}
-  camRight: {x: 20, y: 0, z: -10}
-  camLeft: {x: -20, y: 0, z: -10}
+  camUp: {x: 0, y: 45, z: -10}
+  camDown: {x: 0, y: -45, z: -10}
+  camRight: {x: 45, y: 0, z: -10}
+  camLeft: {x: -45, y: 0, z: -10}
   direction: 0
   camTransitionTime: 2
