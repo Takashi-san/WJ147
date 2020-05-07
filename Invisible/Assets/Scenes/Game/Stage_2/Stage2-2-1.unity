@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 2263975361958388768, guid: 6af500e9a51fecd4e9af9666a49b510c,
         type: 3}
       propertyPath: _scene
-      value: Stage2-1-1
+      value: Stage2-2-1
       objectReference: {fileID: 0}
     - target: {fileID: 2263975361958388770, guid: 6af500e9a51fecd4e9af9666a49b510c,
         type: 3}
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50ef108984d5ed4ab25b31d7e59ee9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interaction: {fileID: 11400000, guid: 4c65c02197b72284d9ed576cfca4ef0b, type: 2}
+  _interaction: {fileID: 11400000, guid: c496f38bea2d71a469437fc21bc71449, type: 2}
   _icon: {fileID: 1257942953}
 --- !u!4 &526484737
 Transform:
@@ -457,7 +457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526484732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.11, y: 1.35, z: 0}
+  m_LocalPosition: {x: 6.62, y: 1.79, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1721296828}
@@ -668,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 2855914441169088978, guid: 5681e283054860b4190cdfd07bed7235,
         type: 3}
       propertyPath: _scene
-      value: Stage2-1-1
+      value: Stage2-2-1
       objectReference: {fileID: 0}
     - target: {fileID: 2855914441169088981, guid: 5681e283054860b4190cdfd07bed7235,
         type: 3}
@@ -1042,7 +1042,7 @@ PrefabInstance:
     - target: {fileID: 7575843441108243125, guid: e81edeae997ba1b43bcaa74a9452b814,
         type: 3}
       propertyPath: _scene
-      value: Stage2-1-1
+      value: Stage2-2-1
       objectReference: {fileID: 0}
     - target: {fileID: 7575843441108243127, guid: e81edeae997ba1b43bcaa74a9452b814,
         type: 3}
@@ -1185,7 +1185,7 @@ PrefabInstance:
     - target: {fileID: 1695970061877788301, guid: 1733cb39db4c0a24dbcf400fd238c22f,
         type: 3}
       propertyPath: _scene
-      value: Stage2-1-2
+      value: Stage2-2-2
       objectReference: {fileID: 0}
     - target: {fileID: 1695970061877788303, guid: 1733cb39db4c0a24dbcf400fd238c22f,
         type: 3}
