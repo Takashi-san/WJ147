@@ -82,6 +82,10 @@ public class SceneHandler : MonoBehaviour {
 		yield break;
 	}
 
+	public void QuitGame() {
+		Application.Quit();
+	}
+
 	void OnApplicationQuit() {
 		if (_transitionData) {
 			_transitionData.transition = null;
