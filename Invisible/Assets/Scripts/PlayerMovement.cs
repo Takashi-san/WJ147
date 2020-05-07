@@ -7,7 +7,11 @@ using System;
 public class PlayerMovement : MonoBehaviour {
 	[SerializeField] PlayerData _playerData = null;
 	[SerializeField] TransitionData _transitionData = null;
+	[SerializeField] [Min(0)] float _stepTime = 0;
+	[SerializeField] [Range(0, 1)] float _pitchMod = 0;
+	float _stepTimer = 0;
 	Animator _animator;
+	AudioSource _audioSource;
 	float _speed;
 	Rigidbody2D _rb;
 	Controls _controls;
@@ -19,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 		_speed = _playerData.speed;
 		_rb = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
+		_audioSource = GetComponent<AudioSource>();
 		_controls = new Controls();
 		_controls.Player.Enable();
 
@@ -56,6 +61,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void FixedUpdate() {
 		Vector2 target;
+		_stepTimer += Time.fixedDeltaTime;
 
 		// Animator: 0 = right, 1 = left, 2 = down, 3 = up.
 		if (_movement.x != 0) {
@@ -66,6 +72,11 @@ public class PlayerMovement : MonoBehaviour {
 				_animator.SetInteger("Direction", 1);
 			}
 			_animator.SetBool("Moving", true);
+			if (_stepTimer > _stepTime) {
+				_audioSource.pitch = 1 + UnityEngine.Random.Range(-_pitchMod, _pitchMod);
+				_audioSource.Play();
+				_stepTimer = 0;
+			}
 
 			target = (Vector2)transform.position + Vector2.right * (_movement.x * _speed * Time.fixedDeltaTime);
 			_rb.MovePosition(target);
@@ -78,12 +89,18 @@ public class PlayerMovement : MonoBehaviour {
 				_animator.SetInteger("Direction", 2);
 			}
 			_animator.SetBool("Moving", true);
+			if (_stepTimer > _stepTime) {
+				_audioSource.pitch = 1 + UnityEngine.Random.Range(-_pitchMod, _pitchMod);
+				_audioSource.Play();
+				_stepTimer = 0;
+			}
 
 			target = (Vector2)transform.position + Vector2.up * (_movement.y * _speed * Time.fixedDeltaTime);
 			_rb.MovePosition(target);
 		}
 		else {
 			_animator.SetBool("Moving", false);
+			_audioSource.Stop();
 		}
 
 		if (_movement != _lastMovement) {

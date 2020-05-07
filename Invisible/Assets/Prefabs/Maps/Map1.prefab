@@ -291,8 +291,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In case of emergency call xxx. The city will offer plenty of support and
-    always be careful when walking along the roads.
+  m_text: 'In case of emergency, call 444.
+
+    Remember: always be careful when
+    walking along the roads.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -361,10 +363,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5779456003701025308}
-    characterCount: 120
+    characterCount: 89
     spriteCount: 0
-    spaceCount: 21
-    wordCount: 22
+    spaceCount: 14
+    wordCount: 15
     linkCount: 0
     lineCount: 2
     pageCount: 1
